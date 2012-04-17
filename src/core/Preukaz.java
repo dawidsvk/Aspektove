@@ -30,9 +30,7 @@ public class Preukaz {
 	public void pozicatKnihu(Kniha kniha){
 		kniha = Kniznica.getInstance().pozicatKnihu(kniha);
 		pozicaneKnihy.add(kniha);
-		kniha.zmenitStav(Stav.POZICANA);
-		pocetPozicanychKnihSpolu ++;
-		kniha.setCasPozicania(System.currentTimeMillis());
+		pocetPozicanychKnihSpolu++;
 	}
 	
 	public ArrayList<Kniha> getPozicaneKnihy() {

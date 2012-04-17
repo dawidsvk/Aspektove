@@ -46,10 +46,12 @@ public class Kniznica {
 */
 	
 	public Kniha pozicatKnihu(Kniha kniha){
-		for (int i = 0; i< zoznamKnih.size();i++){
-			if ((zoznamKnih.get(i).getAutor().equals(kniha.getAutor())) && (zoznamKnih.get(i).getNazov().equals(kniha.getNazov())) && (zoznamKnih.get(i).getRok() == kniha.getRok()) && (zoznamKnih.get(i).getZaner().equals(kniha.getZaner()))){
-				zoznamKnih.get(i).zmenitStav(Stav.POZICANA);
-				return zoznamKnih.get(i);
+		for(Kniha k1 : zoznamKnih){
+			if(kniha.saRovna(k1)){
+				k1.zmenitStav(Stav.POZICANA);
+				System.out.println("kokot");
+				k1.setCasPozicania(System.currentTimeMillis());
+				return k1;
 			}
 		}
 		return null;

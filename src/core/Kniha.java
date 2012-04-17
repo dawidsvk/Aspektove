@@ -48,5 +48,13 @@ public class Kniha {
 	public void zmenitStav(Stav stav) {
 		this.stav = stav;
 	}
+	
+	public boolean saRovna(Kniha k1){
+		if(k1.getAutor().equals(this.getAutor()) && k1.getNazov().equals(this.getNazov()) && k1.getZaner().equals(this.getZaner()) && k1.getRok() == this.getRok()){
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }
