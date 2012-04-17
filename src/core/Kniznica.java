@@ -8,6 +8,7 @@ public class Kniznica {
 	private ArrayList<Citatel> zoznamCitatelov = new ArrayList<Citatel>();
 	private int pocetPreukazov = 0;
 	public static Kniznica instance = null;
+	private int pocetOdoslanychUpomienok = 0;
 	
 	public static Kniznica getInstance(){
 		if (instance == null){
@@ -49,7 +50,6 @@ public class Kniznica {
 		for(Kniha k1 : zoznamKnih){
 			if(kniha.saRovna(k1)){
 				k1.zmenitStav(Stav.POZICANA);
-				//k1.zmenitStav(Stav.POZICANA);
 				k1.setCasPozicania(System.currentTimeMillis());
 				return k1;
 			}
@@ -70,5 +70,26 @@ public class Kniznica {
 	public void odstranitCitatela(Citatel citatel){
 		zoznamCitatelov.remove(citatel);
 	}	
+	
+	public int odoslatUpomienku(){
+		int pocetOdoslanychUpomienok = 0;
+		for (int i = 0; i< zoznamCitatelov.size();i++){
+			Citatel c = zoznamCitatelov.get(i);
+			Preukaz p = c.getPreukaz();
+			if (p!=null){
+				for (int j = 0;j< p.getPozicaneKnihy().size();j++){
+					if(p.getPozicaneKnihy().get(j).getCasPozicania() > 10){
+						for(int k = 0; k < c.getZoznamUpomienok().size(); k++){
+							if (!c.getZoznamUpomienok().get(k).getKniha().saRovna(p.getPozicaneKnihy().get(j))){
+								c.pridajUpomienku(new Upomienka(p.getPozicaneKnihy().get(j),false));
+								pocetOdoslanychUpomienok++;
+							}
+						}
+					}
+				}
+			}
+		}
+		return pocetOdoslanychUpomienok;
+	}		
 
 }
