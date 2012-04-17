@@ -49,15 +49,13 @@ public aspect pozicanieKnihy {
 				verifikacia = false;			
 			}
 			
-			/*System.out.println("***Kontrola poctu knih na preukaze***");
+			System.out.println("***Kontrola poctu knih na preukaze***");
 			if (pocetPozKnih < 3) {
 				System.out.println("Na preukaze je mozne pozicat este "+ (3-pocetPozKnih) + " knih");
 			} else {
 				System.out.println("Pocet pozicanych knih je maximalny");
 				verifikacia = false;			
-			}*/
-			
-			System.out.println("bububui");
+			}
 			
 			System.out.println("***Kontrola ci sa kniha nachadza v kniznici***");
 			int pocetKnih = 0;
