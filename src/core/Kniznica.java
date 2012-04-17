@@ -49,7 +49,6 @@ public class Kniznica {
 		for(Kniha k1 : zoznamKnih){
 			if(kniha.saRovna(k1)){
 				k1.zmenitStav(Stav.POZICANA);
-				System.out.println("kokot");
 				k1.setCasPozicania(System.currentTimeMillis());
 				return k1;
 			}
@@ -65,18 +64,5 @@ public class Kniznica {
 	public void odstranitCitatela(Citatel citatel){
 		zoznamCitatelov.remove(citatel);
 	}	
-	
-	public void odoslatUpomienku(){
-		for (int i = 0; i< zoznamCitatelov.size();i++){
-			Citatel c = zoznamCitatelov.get(i);
-			Preukaz p = c.getPreukaz();
-			if (p!=null){
-				for (int j = 0;j< p.getPozicaneKnihy().size();j++){
-					if(p.getPozicaneKnihy().get(j).getCasPozicania() > 10){
-						c.pridajUpomienku(new Upomienka(p.getPozicaneKnihy().get(j),false));
-					}
-				}
-			}
-		}
-	}
+
 }

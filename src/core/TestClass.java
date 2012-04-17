@@ -33,6 +33,8 @@ public class TestClass {
 		for (int i = 0; i< Kniznica.getInstance().getZoznamKnih().size();i++){
 			System.out.println(Kniznica.getInstance().getZoznamKnih().get(i).getNazov() + " " + Kniznica.getInstance().getZoznamKnih().get(i).getStav());
 		}
+		new OdosielanieUpomienok();
+		while(true){}
 				
 		
 	}
