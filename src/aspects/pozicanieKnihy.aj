@@ -1,10 +1,10 @@
 package aspects;
 
 import core.*;
+
 import java.util.ArrayList;
 
-System.out.println("bude prdel");
-System.out.println("nehovor");
+
 
 public aspect pozicanieKnihy {
 //	pointcut ciMaPreukaz (Preukaz pr): call(* Citatel.getPreukaz(..)) && target(pr);
