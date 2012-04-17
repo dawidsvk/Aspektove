@@ -3,7 +3,7 @@ package aspects;
 import core.*;
 import java.util.ArrayList;
 
-
+System.out.println("bude prdel");
 
 public aspect pozicanieKnihy {
 //	pointcut ciMaPreukaz (Preukaz pr): call(* Citatel.getPreukaz(..)) && target(pr);
