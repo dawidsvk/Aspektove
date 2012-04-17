@@ -4,7 +4,13 @@ import core.*;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 
+=======
+System.out.println("bude prdel");
+System.out.println("nehovor");
+imopkgfmiomkt grthgfdghf
+>>>>>>> af5e0e6906f37b779f4c7db8b400071c7efc0ad2
 
 public aspect pozicanieKnihy {
 //	pointcut ciMaPreukaz (Preukaz pr): call(* Citatel.getPreukaz(..)) && target(pr);
