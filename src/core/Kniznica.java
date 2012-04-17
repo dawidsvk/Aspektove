@@ -48,7 +48,6 @@ public class Kniznica {
 	public Kniha pozicatKnihu(Kniha kniha){
 		for(Kniha k1 : zoznamKnih){
 			if(kniha.saRovna(k1)){
-				System.out.println("pice");
 				//k1.zmenitStav(Stav.POZICANA);
 				k1.setCasPozicania(System.currentTimeMillis());
 				return k1;
