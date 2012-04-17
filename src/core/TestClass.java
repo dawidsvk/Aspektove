@@ -23,10 +23,9 @@ public class TestClass {
 		
 		
 		Kniha k3 = new Kniha("je temno", "Jan Smrek", 1945, "beletria");
-	
-		c1.pozicajKnihu(k3);
-		c1.pozicajKnihu(k2);
-		c1.pozicajKnihu(k4);
+		
+		//c1.pozicajKnihu(k4);
+		//c1.pozicajKnihu(k2);
 		c1.pozicajKnihu(k1);
 		
 		
