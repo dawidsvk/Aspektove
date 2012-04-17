@@ -15,6 +15,10 @@ public class Citatel {
 		preukaz = null;
 	}
 	
+	public ArrayList<Upomienka> getZoznamUpomienok() {
+		return zoznamUpomienok;
+	}
+
 	public Preukaz getPreukaz() {
 		return preukaz;
 	}

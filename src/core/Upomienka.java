@@ -9,4 +9,8 @@ public class Upomienka {
 		this.kniha = kniha;
 		this.uhradena = uhradena;
 	}
+
+	public Kniha getKniha() {
+		return kniha;
+	}
 }

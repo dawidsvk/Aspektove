@@ -49,6 +49,7 @@ public class Kniznica {
 		for(Kniha k1 : zoznamKnih){
 			if(kniha.saRovna(k1)){
 				k1.zmenitStav(Stav.POZICANA);
+				//k1.zmenitStav(Stav.POZICANA);
 				k1.setCasPozicania(System.currentTimeMillis());
 				return k1;
 			}
@@ -56,6 +57,11 @@ public class Kniznica {
 		return null;
 	}
 	
+	public ArrayList<Citatel> getZoznamCitatelov() {
+		return zoznamCitatelov;
+	}
+
+
 	public Preukaz pridatCitatela(Citatel citatel){
 		zoznamCitatelov.add(citatel);
 		return new Preukaz(++pocetPreukazov, citatel, System.currentTimeMillis() + 5000);

@@ -23,17 +23,16 @@ public class TestClass {
 		
 		
 		Kniha k3 = new Kniha("je temno", "Jan Smrek", 1945, "beletria");
-	
-		c1.pozicajKnihu(k3);
-		c1.pozicajKnihu(k2);
-		c1.pozicajKnihu(k4);
+		
+		//c1.pozicajKnihu(k4);
+		//c1.pozicajKnihu(k2);
 		c1.pozicajKnihu(k1);
 		
 		
 		for (int i = 0; i< Kniznica.getInstance().getZoznamKnih().size();i++){
 			System.out.println(Kniznica.getInstance().getZoznamKnih().get(i).getNazov() + " " + Kniznica.getInstance().getZoznamKnih().get(i).getStav());
 		}
-		new OdosielanieUpomienok();
+		new Casovac();
 		while(true){}
 				
 		
